@@ -1,19 +1,24 @@
 import React from "react";
 import Header from "../parts/Header";
 import Footer from "../parts/Footer";
+import Posts from "../parts/Posts";
+import Sidebar from "../parts/Sidebar";
+import Breadcrumb from "../parts/Breadcrumb";
 
 const Category = () => {
     return(
         <>
-            <Header/>
-                <div style={{height: '60vh', padding: '3rem'}}>
-                    <h1>
-                        <center>
-                            Category Blog
-                        </center>
-                    </h1>
+        <Header />
+        <Breadcrumb/>
+        <section class="blog-section">
+            <div class="container">
+                <div class="row">
+                    <Posts/>
+                    <Sidebar/>
                 </div>
-            <Footer/>
+            </div>
+        </section>
+        <Footer/>
         </>
     )
 }
