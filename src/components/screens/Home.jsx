@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Header from "../parts/Header";
-import Slider from "../parts/Slider";
-import TrendingPosts from "../parts/TrendingPosts";
-import FreshStories from "../parts/FreshStories";
-import Footer from "../parts/Footer";
+import Header from "../parts/common/Header";
+import Slider from "../parts/home/Slider";
+import TrendingPosts from "../parts/home/TrendingPosts";
+import FreshStories from "../parts/home/FreshStories";
+import Footer from "../parts/common/Footer";
 
 const Home = () => {
     return(

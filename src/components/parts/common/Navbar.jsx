@@ -18,7 +18,7 @@ const Navbar = () => {
                     <ul className="navbar-nav m-auto">
                         <li><Link to="/">Home</Link></li>
                         <li><Link to="/category">Category</Link></li>
-                        <li><Link to="/posts">All Posts</Link></li>
+                        <li><Link to="/single">Single</Link></li>
                         <li><Link to="/about">About</Link></li>
                     </ul>
 

@@ -1,9 +1,9 @@
 import React from "react";
-import Header from "../parts/Header";
-import Footer from "../parts/Footer";
-import Posts from "../parts/Posts";
-import Sidebar from "../parts/Sidebar";
-import Breadcrumb from "../parts/Breadcrumb";
+import Header from "../parts/common/Header";
+import Footer from "../parts/common/Footer";
+import Posts from "../parts/category/Posts";
+import Sidebar from "../parts/category/Sidebar";
+import Breadcrumb from "../parts/category/Breadcrumb";
 
 const Category = () => {
     return(
