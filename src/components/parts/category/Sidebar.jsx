@@ -2,12 +2,12 @@ import React from "react";
 
 const Sidebar = () => {
     return(
-        <div class="col-lg-4">
-            <div class="sidebar">
+        <div className="col-lg-4">
+            <div className="sidebar">
 
-                <div class="widget category-widget">
+                <div className="widget category-widget">
                     <h2>Categories</h2>
-                    <ul class="category-list">
+                    <ul className="category-list">
                         <li>
                             <a href="#">
                                 Travel <span>24</span>
@@ -26,37 +26,37 @@ const Sidebar = () => {
                     </ul>
                 </div>
 
-                <div class="widget list-widget">
+                <div className="widget list-widget">
                     <h2>Latest Stories</h2>
-                    <ul class="list-posts">
+                    <ul className="list-posts">
                         <li>
-                            <a class="text-link" href="#">Lifestyle</a>
+                            <a className="text-link" href="#">Lifestyle</a>
                             <h2><a href="single-post.html">Fusce pellentesque suscipit.</a></h2>
-                            <ul class="post-tags">
+                            <ul className="post-tags">
                                 <li>2 days ago</li>
                                 <li><a href="#">0 comments</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="text-link" href="#">Food</a>
+                            <a className="text-link" href="#">Food</a>
                             <h2><a href="single-post.html">Integer vitae libero ac risus egestas placerat.</a></h2>
-                            <ul class="post-tags">
+                            <ul className="post-tags">
                                 <li>2 days ago</li>
                                 <li><a href="#">3 comments</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="text-link" href="#">Lifestyle</a>
+                            <a className="text-link" href="#">Lifestyle</a>
                             <h2><a href="single-post.html">Vestibulum commodo felisquis tortor.</a></h2>
-                            <ul class="post-tags">
+                            <ul className="post-tags">
                                 <li>4 days ago</li>
                                 <li><a href="#">0 comments</a></li>
                             </ul>
                         </li>
                         <li>
-                            <a class="text-link" href="#">Travel</a>
+                            <a className="text-link" href="#">Travel</a>
                             <h2><a href="single-post.html">Quisque a lectus. </a></h2>
-                            <ul class="post-tags">
+                            <ul className="post-tags">
                                 <li>4 days ago</li>
                                 <li><a href="#">0 comments</a></li>
                             </ul>
