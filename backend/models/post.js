@@ -26,7 +26,12 @@ const post = mongoose.Schema({
         type: ObjectId,
         ref: "Category"
     },
-});
+},
+{
+    timestamps: true
+}
+);
 
+post.index({ "$**": "text"});
 
 mongoose.model("Post", post);

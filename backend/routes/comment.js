@@ -54,4 +54,14 @@ router.post("/new-comment", (req, res) => {
     })
 });
 
+router.get("/comment-count", (req, res) => {
+    Comment.count()
+    .then((comments) => {
+        res.json({comments});
+    })
+    .catch(err => {
+        console.log("Post Error : " + err);
+    })
+});
+
 module.exports = router;

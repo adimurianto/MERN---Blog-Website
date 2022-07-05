@@ -10,7 +10,11 @@ const comment = mongoose.Schema({
         type: ObjectId,
         ref: "Post"
     }
-});
+},
+{
+    timestamps: true
+}
+);
 
 
 mongoose.model("Comment", comment);
