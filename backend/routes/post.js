@@ -15,6 +15,39 @@ router.get("/posts", (req, res) => {
     })
 });
 
+router.get("/featured-posts", (req, res) => {
+    Post.find({isFeatured: true})
+    .populate("category", "_id name")
+    .then((posts) => {
+        res.json({posts});
+    })
+    .catch(err => {
+        console.log("Post Error : " + err);
+    })
+});
+
+router.get("/posts/:id", (req, res) => {
+    Post.find({_id: req.params.id})
+    .populate("category", "_id name")
+    .then((posts) => {
+        res.json({posts});
+    })
+    .catch(err => {
+        console.log("Post Error : " + err);
+    })
+});
+
+router.get("/posts/category/:catId", (req, res) => {
+    Post.find({category: {_id: req.params.catId}})
+    .populate("category", "_id name")
+    .then((posts) => {
+        res.json({posts});
+    })
+    .catch(err => {
+        console.log("Post Error : " + err);
+    })
+});
+
 router.get("/trending-posts", (req, res) => {
     Post.find()
     .sort({numOfLikes: -1})
@@ -41,9 +74,9 @@ router.get("/fresh-stories", (req, res) => {
 });
 
 router.post("/new-post", (req, res) => {
-    const {title, description, imgUrl, category, numOfLikes} = req.body;
+    const {title, description, imgUrl, category, numOfLikes, isFeatured} = req.body;
 
-    if(!title || !description || !imgUrl || !category || !numOfLikes) {
+    if(!title || !description || !imgUrl || !category || !numOfLikes || !isFeatured) {
         res.json({err: "All fields are required"});
     }
 
@@ -54,7 +87,8 @@ router.post("/new-post", (req, res) => {
             description,
             imgUrl,
             category: cat,
-            numOfLikes
+            numOfLikes,
+            isFeatured
         });
     
         post
